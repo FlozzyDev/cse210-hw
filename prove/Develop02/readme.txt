@@ -1,45 +1,20 @@
-Outline Journal Activity 
+Going to use this form to track the extra features I want to add. I may not have the time to add them all, but I will list my thoughts.
 
-Class - Start Menu 
-{ Write / Display / Load / Save / Quit}
+----------------Extra features------------------------
+Add a mood rating to each entry (1-10) - Complete!
+Add a mood average whenever displaying a journal - Complete!
+Add a password - Zion - Complete!
+Add multiple (3) password entry attempts. If attempts == 2, console.WriteLine{hint} - Not Complete =(
+Add the number of entries in memory next to  "Save" and "Display" - Complete!
+Add the number of entries in the file prior to loading - Not Complete 
+Add a unique number (RID) per record (created at save) that iterates 1++ (need to first read the file and find the MAX int) - Not Complete 
+Check the RID prior to save (to make sure no overwrites/dupes) - Not Complete 
+Check the RID when loading to only add missing records to memory (I save 1 entry, then I load. I don't want 2 of them) - Not Complete
 
-WriteOption - Display prompt + gives user ability to enter text. Once user enters data, save to variable list.
+---------------Notes----------------
 
-All entries need date / prompt / text 
+I really don't like the save/load method, I think auto save upon an entry being complete would make more sense. I don't think I can change it, so instead
+I'm thinking of adding a primary key type unique ID for each entry created, and then use that key to verify saves/loads. 
 
-Display - Iterate through variable list and display date / prompt / text for each 
-
-Save - Save the list to file specified 
-
-Load - Load list into the program and set it's value to variable list
-
-quit - end program
-
--------------
-
-Variables
-
-_prompt
--responseText - The text of a user response
-_date - Need to get from computer -DateTime theCurrentTime = DateTime.Now; / string _date = theCurrentTime.ToShortDateString();
-
-data Class - Entry - a _date, _prompt, and _responseText 
-
-_entryList - public List<Entry> _entrysList = new List<Entry>();
-_promptList - public List<Prompt> _promptList = new List<Prompt>();
-
-Main Classes
-Program / Setup - first initilize the 2 lists (entry/prompt)
-Main - Display the menu (while var = true console.Write XXX and then var = false when user picks quit)
-
-Sub-classes or 1 class for tools? May keep them all within entry since tthey are related.
-WriteEntry - _date = now, prompt = random | display text prompt | ReadLine = _responseText | Call Entry class and save (Entry latestEntry = new Entry(date, prompt, responseText + add it))
-DisplayEntry - If entry 0, tell them. Else, write out entry in format. 
-SaveEntry - if 0 entries, tell them. Else, ask for a file name to write to. Need to look at what the syntax for writing is 
-LoadEntry - If file exists, clear the current EntryList and then set a new entry for each line. 
-
-
-
-
-
+I'm going to try and use LINQ as well - trying to get used to using it so I can hopefully transition to JET in GO easier 
 
