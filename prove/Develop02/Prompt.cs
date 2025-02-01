@@ -36,9 +36,10 @@ public class Prompt
         "What was the most memorable moment of today?", 
     };
 
-    public string GeneratePrompt()
+    public string GeneratePrompt() /* I realized this is pretty weak and should probably be put in a temp set or something to avoid repeats */
     {
-        Random random = new Random();
+        Random random = new Random(); 
+
         int choice = random.Next(_promptList.Count);
         return _promptList[choice];
     }

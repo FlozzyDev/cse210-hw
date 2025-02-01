@@ -10,19 +10,23 @@ public class Entry
     {
         _prompt = prompt;
         _entry = entry;
-        _date = DateTime.Now.ToString("yyyy-MM-dd"); /* todo - need to see how much of a pain adding the time would be in case multiple entries in a day */ 
+        _date = DateTime.Now.ToString("yyyy-MM-dd"); /* --------todo - need to see how much of a pain adding the time would be in case multiple entries in a day */ 
         _moodString ="Your mood rating that entry:";
         _moodRating = moodRating;
     }
 
-
-    public string FormatEntry() /* used when saving in format */ 
+    public string FormatEntry()
     {
         return $"{_date}|{_prompt}|{_entry}|{_moodString}|{_moodRating}";
     }
+    
+    public void DisplayEntry() /* After class I realized I didn't have this method in the Entry class(was just all in Journal), moved it over so it's a bit more modular */
+    {
+            string[] parts = FormatEntry().Split('|');
+            Console.WriteLine($"\nDate: {parts[0]} - Prompt: {parts[1]} \nYour response: {parts[2]}\n{parts[3]} {parts[4]}");
+    }
 
-
-    public void ParseEntry(string formattedEntry) /* When loading the journal, this will parse the entry back into format */
+    public void ParseEntry(string formattedEntry)
     {
         string[] parts = formattedEntry.Split('|');
         if (parts.Length == 5)
@@ -35,9 +39,13 @@ public class Entry
         }
     }
 
-
     public int GetMoodRating() 
     {
         return _moodRating;
+    }
+
+    public int GetPK() /* --------todo - need to add a primary key to each entry - it needs to increment from max of whatever the highest key (in list or in journal.txt)*/
+    {
+        return 0;
     }
 }

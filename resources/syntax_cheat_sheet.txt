@@ -1,0 +1,84 @@
+The context switching between work (GO/TS/SQL/C#) and school (JS/CSS/HTML/C#) is killing me, so I'm going to drop some syntax so I can hop over here and not google
+every 2 seconds when I need basic syntax that I should have memorized already! Go ahead and ignore this file. 
+
+
+------------------------------------------------ Loops - 
+
+for (int i = 0; i < 10; i++) { /* Iterates from 0 to 9 */ }
+
+while (condition) { /* Repeats while condition is true */ }
+
+do { /* Executes once, then repeats while condition is true */ } while (condition);
+
+foreach (var item in collection) { /* Iterates over collections */ }
+
+
+------------------------------------------------ Conditionals - 
+if (condition) { /* Executes if true */ } 
+
+else if (anotherCondition) { /* Executes if first is false */ } 
+
+else { /* Executes if all above are false */ }
+
+switch (variable) 
+{
+    case "value1": /* Executes if variable matches value1 */ break;
+    case "value2": /* Executes if variable matches value2 */ break;
+    default: /* Executes if no case matches */ break;
+}
+
+
+------------------------------------------------Exceptions 
+
+try { /* Code that might throw an exception */ } 
+
+catch (Exception ex) { /* Handles exception */ } 
+
+finally { /* Executes no matter what */ }
+
+------------------------------------------------Jump Statements
+
+break;      // Exits loop or switch
+
+continue;   // Skips current loop iteration
+
+return;     // Exits function and returns a value (if needed)
+
+goto label; // Jumps to a labeled statement (avoid if possible)
+
+
+------------------------------------------------Concurrency & Parallelism
+
+async Task MethodAsync() { await SomeAsyncMethod(); }
+
+lock (someObject) { /* Ensures one thread accesses this block at a time */ }
+
+Parallel.For(0, 10, i => { /* Executes iterations in parallel */ });
+
+------------------------------------------------Operators 
+
+&&  // AND: true if both conditions are true (a && b)
+||  // OR: true if at least one condition is true (a || b)
+!   // NOT: reverses a boolean value (!a)
+
+&   // Bitwise AND: a & b
+|   // Bitwise OR: a | b
+^   // Bitwise XOR: a ^ b
+~   // Bitwise NOT: ~a
+<<  // Left shift: a << 2
+>>  // Right shift: a >> 2
+
+=   // Assign: a = b
++=  // Add and assign: a += b (same as a = a + b)
+-=  // Subtract and assign: a -= b
+*=  // Multiply and assign: a *= b
+/=  // Divide and assign: a /= b
+%=  // Modulus and assign: a %= b
+
+-----------------------------------------------------------USE THIS AS MUCH AS YOU CAN (Ternary Operator)
+
+condition ? value_if_true : value_if_false;
+
+int max = (a > b) ? a : b; // If a > b, max = a, otherwise max = b
+
+

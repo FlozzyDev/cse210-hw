@@ -3,7 +3,6 @@ using System;
 public class Program
 {   
 
-    /* todo - need to add 3 attempts and only fail after 3 failures - maybe add a hint at 2*/ 
     private string _password = "Zion"; /* Don't tell anyone! */ 
 
     public static void Main(string[] args)
@@ -15,15 +14,27 @@ public class Program
         }
         else
         {
-            Console.WriteLine("Invalid password. Program terminating.");
+            Console.WriteLine("3 Invalid passwords. Program terminating.");
         }
     }
 
     public bool ValidatePassword()
     {
-        Console.Write("Enter password: ");
-        string input = Console.ReadLine();
-        return input == _password;
+        for (int attempts = 0; attempts < 3; attempts++)
+        {
+            Console.Write("Enter password:");
+            string passwordAttempt = Console.ReadLine();
+
+            if (passwordAttempt == _password)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Invalid password. Please try again.");
+            }
+        }
+        return false;
     }
 
     public void DisplayMainMenu()
@@ -40,7 +51,7 @@ public class Program
             Console.WriteLine("5. Exit");
 
             Console.Write("Select an option: ");
-            string choice = Console.ReadLine(); /* user can choose 1 of 5 options */ 
+            string choice = Console.ReadLine(); /* ------------todo---- add a new choice, delete. First need PK and we can target that row. We can only delete if load has happened at least once. */ 
             switch (choice)
             {
                 case "1":
@@ -66,7 +77,7 @@ public class Program
                     break;
                     
                 case "2":
-                    journal.DisplayEntries();
+                    journal.DisplayJournal();
                     break;
 
                 case "3":

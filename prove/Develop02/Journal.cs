@@ -9,7 +9,7 @@ public class Journal
         _entries.Add(entry);
     }
 
-    public void DisplayEntries()
+    public void DisplayJournal() /* moved logic over to Entry and now we call that method here foreach then display the mood avg at the end*/
     {
         if (_entries.Count == 0)
         {
@@ -18,25 +18,22 @@ public class Journal
         }
         foreach (Entry entry in _entries)
         {
-            string[] parts = entry.FormatEntry().Split('|');
-            Console.WriteLine($"\nDate: {parts[0]} - Prompt: {parts[1]} \nYour response: {parts[2]}\n{parts[3]} {parts[4]}");
+            entry.DisplayEntry();
         }
         var (averageMood, entryCount) = GetAverageMood();
         Console.WriteLine($"\nAverage mood rating: {averageMood:F1} across {entryCount} entries");
     }
 
-
-    public (double averageMood, int entryCount) GetAverageMood() /* used a tuple, not sure if that's okay. I didn't want to make a whole class for mood and this worked with LINQ*/
+    public (double averageMood, int entryCount) GetAverageMood() /* Talked to Brother Burton about this, not Ai - told me to add a comment */
     {
         int entryCount = _entries.Count;
         if (entryCount == 0)
         {
             return (0, 0);
         }
-        double total = _entries.Sum(entry => entry.GetMoodRating()); /* going to try and get used to using LINQ/lambda more in this and future programs */
+        double total = _entries.Sum(entry => entry.GetMoodRating()); /* Talked to Brother Burton about this, not AI. Trying to practice/find uses for LINQ */
         return (total / entryCount, entryCount);
     }
-
 
     public void SaveJournal(string filePath)
     {
@@ -62,7 +59,7 @@ public class Journal
         }
     }
 
-    public void LoadJournal(string filePath)
+    public void LoadJournal(string filePath) /* I really would like to call this after DisplayMainMenu() since it's easy to overwrite save if you create a new entry and then save prior to loading... it hurts to leave this  */
     {
         try
         {
@@ -83,20 +80,18 @@ public class Journal
                 Console.WriteLine("No journal file found.");
             }
         }
-        catch (Exception ex)
+        catch (Exception ex) /* --------todo - need to add a check for the file to see if it's empty or not. Maybe catch some other use cases */ 
         {
             Console.WriteLine($"Error loading journal: {ex.Message}");
         }
     }
-
-
 
     public int GetEntryCount() /* adding so user can see prior to save/display */ 
     {
         return _entries.Count;
     }
 
-    public int GetFileEntryCount() /* want to add a similar count to load to pre-check the file when display loads - placeholder name for now */ 
+    public int GetFileEntryCount() /* --------todo - want to add a similar count to load to pre-check the file when display loads - placeholder name for now */ 
     {
         return 0;
     }
