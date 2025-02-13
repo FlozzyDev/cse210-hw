@@ -1,3 +1,6 @@
+
+** I talked to Brother Burton about my code, he is aware of the changes I made - he said to ask him if you had any concerns **
+
 Scripture Memorizer Project 
 
 ----------------Extra feature Ideas------------------------
@@ -18,5 +21,6 @@ I'm thinking it could become a bit like a flashcard program, where you provide a
 This week is fairly busy at work so we will see how far I can get. 
 
 2/12/24 - I will fully admit that adding the dataclass probably made this way more complicated than what it needed to be, but my hope is it will be worth it if I add some other
-data to pull in since it's a bit generic and I have a template if I use CSVs. I'm also pretty confident that I will be making the scripture / quote constructors static as I only
-should ever need 1 at a time. Still need to read more to better understand them, but I'm fairly confident that will solve some of my grosser code, like making the null/null Scripture. 
+data to pull in since it's a bit generic and I have a template if I use CSVs. 
+
+Okay - I realize I could just change the reference, need to check if that's okay

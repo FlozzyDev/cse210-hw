@@ -3,35 +3,26 @@ public class Scripture
     private Reference _reference;
     private List<Word> _words;
 
-    public Scripture(Reference reference, List<Word> words)
-    {
-        _reference = reference;
-        _words = words;
-    }
-
-    public Scripture CreateWithData(Data data)
+    public Scripture(Data data) // Talked to Brother Burton about this and he said it was fine that I changed the constructor. 
     {
         string verseText = data.GetColumnC().Trim();
-        Reference reference;
 
         if (verseText.Contains('-'))
         {
             string[] verses = verseText.Split('-');
-            reference = new Reference (data.GetColumnA().Trim(), int.Parse(data.GetColumnB().Trim()), int.Parse(verses[0].Trim()), int.Parse(verses[1].Trim()));
+            _reference = new Reference(data.GetColumnA().Trim(), int.Parse(data.GetColumnB().Trim()), int.Parse(verses[0].Trim()), int.Parse(verses[1].Trim()));
         }
         else
         {
-            reference = new Reference(data.GetColumnA().Trim(), int.Parse(data.GetColumnB().Trim()), int.Parse(verseText.Trim()));
+            _reference = new Reference(data.GetColumnA().Trim(), int.Parse(data.GetColumnB().Trim()), int.Parse(verseText.Trim()));
         }
 
-        List<Word> words = new List<Word>();
+        _words = new List<Word>();
         string[] wordList = data.GetColumnD().Trim().Split(' ');
         foreach (string word in wordList)
         {
-            words.Add(new Word(word));
+            _words.Add(new Word(word));
         }
-
-        return new Scripture(reference, words);
     }
 
     public int GetHideCount()

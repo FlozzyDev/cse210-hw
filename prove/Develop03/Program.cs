@@ -8,8 +8,7 @@ class Program
         data.LoadData("scriptures.csv");
 
         Data randomScripture = data.getRandomData();
-        Scripture scripture = new Scripture(null, null); // Pretty sure I am missing something very obvious to get this to work without having to make an instance here first.
-        scripture = scripture.CreateWithData(randomScripture);
+        Scripture scripture = new Scripture(randomScripture);
 
         Console.Clear();
         Console.WriteLine(scripture.GetTextDisplay());
