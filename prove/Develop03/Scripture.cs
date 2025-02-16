@@ -25,41 +25,36 @@ public class Scripture
         }
     }
 
-    public int GetHideCount()
+    public (int visibleWords, int wordsToHide) GetWordCount() // find visible words and base the number of words to hide on that
     {
-        int nonHiddenWord = 0;
+        int visibleWords = 0;
         foreach (Word word in _words)
         {
             if (!word.HideStatus())
             {
-                nonHiddenWord++;
+                visibleWords++;
             }
         }
 
-        if (nonHiddenWord > 25 )
+        int wordsToHide = 0;
+        if (visibleWords <= 3)
         {
-            return nonHiddenWord / 4;
+            wordsToHide = visibleWords;
         }
-        else if (nonHiddenWord > 15)
+        else if (visibleWords <= 15)
         {
-            return nonHiddenWord  / 5;
+            wordsToHide = 3;
         }
-        else if (nonHiddenWord > 10)
+        else if (visibleWords <= 25)
         {
-            return nonHiddenWord  / 3;
-        }
-        else if (nonHiddenWord > 4)
-        {
-            return nonHiddenWord  / 2;
+            wordsToHide = 5;
         }
         else
         {
-            return 1;
+            wordsToHide = 8;
         }
 
-        
-
-        
+        return (visibleWords, wordsToHide);
     }
 
     public void HideRandomWords(int hideNumber)
