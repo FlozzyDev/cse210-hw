@@ -43,11 +43,11 @@ public class Data
 
     public void LoadData(string filename)
     { 
-        var lines = File.ReadAllLines(filename);
+        var lines = File.ReadAllLines(filename); // varKeyword.md 
 
-        foreach (var line in lines)
+        foreach (var line in lines) // varKeyword.md 
         {
-            var columns = line.Split(',', 4); // need to add the 4 otherwise the text gets split a bunch
+            var columns = line.Split(',', 4); // Need a max amount since the text contains commas
             var dataObject = new Data
             {
                 _columnA = columns[0],

@@ -26,9 +26,9 @@ class Program
                     (int visibleCount, int wordsToHide) = scripture.GetWordCount();
                     Console.WriteLine("Total visible words left: " + visibleCount);
                     Console.WriteLine("Press enter to hide " + wordsToHide + " words or type 'end' to stop memorization session.");
-                    string scriptureinput = Console.ReadLine();
+                    string userinput = Console.ReadLine();
 
-                    if (scriptureinput == "end")
+                    if (userinput == "end")
                     {
                         break;
                     }
