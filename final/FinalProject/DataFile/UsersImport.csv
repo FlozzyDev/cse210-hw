@@ -1,0 +1,166 @@
+firstName,lastName,email,role,department,major
+Jennifer,Kaiser,jennifer.kaiser@BYUI.edu,Teacher,Foreign Languages,
+Katie,Savage,katie.savage@BYUI.edu,Teacher,Music,
+Jackson,Allen,jackson.allen@BYUI.edu,Teacher,History,
+John,Schaefer,john.schaefer@BYUI.edu,Teacher,Computer Science,
+Zachary,Hernandez,zachary.hernandez@BYUI.edu,Teacher,Social Studies,
+Diana,Garcia,diana.garcia@BYUI.edu,Teacher,History,
+Sarah,Wilson,sarah.wilson@BYUI.edu,Teacher,History,
+Melissa,Dixon,melissa.dixon@BYUI.edu,Teacher,Social Studies,
+Caitlin,Reid,caitlin.reid@BYUI.edu,Teacher,Foreign Languages,
+Amber,Morris,amber.morris@BYUI.edu,Teacher,Music,
+Bryan,Johnson,bryan.johnson@BYUI.edu,Teacher,Mathematics,
+Brenda,Booth,brenda.booth@BYUI.edu,Teacher,Science,
+Barbara,Long,barbara.long@BYUI.edu,Teacher,Physical Education,
+Alyssa,Gregory,alyssa.gregory@BYUI.edu,Teacher,Physical Education,
+Anthony,Rivera,anthony.rivera@BYUI.edu,Teacher,Physical Education,
+Jason,Roberts,jason.roberts246@student.edu,Student,,Economics
+Mark,Wise,mark.wise613@student.edu,Student,,Mathematics
+Jeffery,Leblanc,jeffery.leblanc309@student.edu,Student,,Psychology
+Heather,Scott,heather.scott24@student.edu,Student,,Political Science
+Michelle,Rice,michelle.rice600@student.edu,Student,,Physics
+Ronnie,Yu,ronnie.yu67@student.edu,Student,,Physics
+Cindy,White,cindy.white185@student.edu,Student,,Physics
+Joseph,Rush,joseph.rush467@student.edu,Student,,Undeclared
+Robert,Ward,robert.ward406@student.edu,Student,,Economics
+Lori,Franklin,lori.franklin568@student.edu,Student,,Economics
+Jennifer,Jackson,jennifer.jackson56@student.edu,Student,,Chemistry
+Elaine,Brown,elaine.brown295@student.edu,Student,,Biology
+Jason,Garcia,jason.garcia514@student.edu,Student,,Communications
+James,Gray,james.gray154@student.edu,Student,,Business
+Evelyn,Kirby,evelyn.kirby745@student.edu,Student,,Physics
+Eric,Tucker,eric.tucker421@student.edu,Student,,Communications
+Kevin,Davis,kevin.davis123@student.edu,Student,,Mathematics
+Nicole,Snyder,nicole.snyder155@student.edu,Student,,Economics
+Evelyn,Roach,evelyn.roach655@student.edu,Student,,Biology
+Timothy,Banks,timothy.banks52@student.edu,Student,,Psychology
+Devin,Thompson,devin.thompson693@student.edu,Student,,Economics
+Derrick,Mendez,derrick.mendez674@student.edu,Student,,History
+Deborah,Wagner,deborah.wagner628@student.edu,Student,,Economics
+Steven,Mills,steven.mills572@student.edu,Student,,Psychology
+Justin,Davis,justin.davis56@student.edu,Student,,Computer Science
+Steven,Reyes,steven.reyes77@student.edu,Student,,Political Science
+Gloria,Garrett,gloria.garrett552@student.edu,Student,,Literature
+Gregory,Hall,gregory.hall178@student.edu,Student,,Psychology
+Erica,Bell,erica.bell48@student.edu,Student,,Computer Science
+Michelle,Watson,michelle.watson110@student.edu,Student,,Chemistry
+Zachary,Best,zachary.best250@student.edu,Student,,Economics
+Jeffrey,Howard,jeffrey.howard423@student.edu,Student,,Biology
+Anthony,Walsh,anthony.walsh250@student.edu,Student,,Business
+Becky,Rivera,becky.rivera289@student.edu,Student,,Economics
+Bruce,Hahn,bruce.hahn920@student.edu,Student,,Chemistry
+Elizabeth,Williams,elizabeth.williams788@student.edu,Student,,Physics
+Christina,Hamilton,christina.hamilton19@student.edu,Student,,Undeclared
+Juan,Avery,juan.avery519@student.edu,Student,,Chemistry
+Leslie,Valentine,leslie.valentine886@student.edu,Student,,Computer Science
+Jeremy,Mosley,jeremy.mosley601@student.edu,Student,,Psychology
+David,Romero,david.romero936@student.edu,Student,,Literature
+Melissa,Welch,melissa.welch383@student.edu,Student,,Undeclared
+Tyler,Harris,tyler.harris382@student.edu,Student,,Computer Science
+Dawn,Gonzalez,dawn.gonzalez75@student.edu,Student,,History
+Brian,Wood,brian.wood268@student.edu,Student,,Biology
+William,Mccormick,william.mccormick579@student.edu,Student,,Physics
+Rhonda,Mcgrath,rhonda.mcgrath620@student.edu,Student,,Psychology
+Carla,Robertson,carla.robertson280@student.edu,Student,,Business
+Christopher,Nelson,christopher.nelson894@student.edu,Student,,Political Science
+Patrick,Smith,patrick.smith857@student.edu,Student,,Communications
+Caitlin,Duke,caitlin.duke55@student.edu,Student,,Mathematics
+Wesley,Hayes,wesley.hayes336@student.edu,Student,,Political Science
+Kelly,Adams,kelly.adams210@student.edu,Student,,Biology
+Colleen,Jimenez,colleen.jimenez132@student.edu,Student,,Political Science
+Darin,Ortega,darin.ortega655@student.edu,Student,,Political Science
+Tyler,Lopez,tyler.lopez890@student.edu,Student,,Chemistry
+Jorge,Waller,jorge.waller823@student.edu,Student,,Biology
+Peter,Robinson,peter.robinson552@student.edu,Student,,Communications
+Lori,Brooks,lori.brooks608@student.edu,Student,,Political Science
+David,Hughes,david.hughes992@student.edu,Student,,Engineering
+Brianna,Dillon,brianna.dillon926@student.edu,Student,,Engineering
+Melissa,Ortiz,melissa.ortiz231@student.edu,Student,,History
+Robert,Turner,robert.turner28@student.edu,Student,,Literature
+Ryan,Murillo,ryan.murillo717@student.edu,Student,,Psychology
+Jennifer,Campos,jennifer.campos189@student.edu,Student,,Psychology
+Cody,Colon,cody.colon572@student.edu,Student,,Economics
+Kelly,Chapman,kelly.chapman525@student.edu,Student,,Political Science
+Andrew,Hernandez,andrew.hernandez341@student.edu,Student,,Biology
+Nicole,Watson,nicole.watson590@student.edu,Student,,Communications
+Michael,Maldonado,michael.maldonado126@student.edu,Student,,Business
+Benjamin,Alvarez,benjamin.alvarez84@student.edu,Student,,Communications
+Matthew,Johnson,matthew.johnson255@student.edu,Student,,History
+Derek,Olsen,derek.olsen428@student.edu,Student,,Political Science
+Spencer,Wood,spencer.wood50@student.edu,Student,,History
+Caleb,Gates,caleb.gates570@student.edu,Student,,Physics
+Caroline,Jordan,caroline.jordan702@student.edu,Student,,Economics
+Ralph,Richardson,ralph.richardson793@student.edu,Student,,Communications
+Lisa,Glover,lisa.glover210@student.edu,Student,,Chemistry
+Lawrence,Johnson,lawrence.johnson566@student.edu,Student,,Biology
+Whitney,Smith,whitney.smith922@student.edu,Student,,Biology
+Hector,Scott,hector.scott891@student.edu,Student,,Economics
+Brett,Freeman,brett.freeman821@student.edu,Student,,Biology
+Nicholas,Scott,nicholas.scott253@student.edu,Student,,Political Science
+Cheryl,Walker,cheryl.walker786@student.edu,Student,,Literature
+Jeffrey,Chambers,jeffrey.chambers663@student.edu,Student,,Undeclared
+Sabrina,Hardin,sabrina.hardin665@student.edu,Student,,Business
+Tiffany,Edwards,tiffany.edwards318@student.edu,Student,,Political Science
+Sarah,Fuller,sarah.fuller857@student.edu,Student,,Political Science
+Scott,Pena,scott.pena535@student.edu,Student,,Psychology
+Jacqueline,Hill,jacqueline.hill315@student.edu,Student,,Communications
+Kimberly,Williams,kimberly.williams962@student.edu,Student,,Engineering
+Kathy,Clarke,kathy.clarke190@student.edu,Student,,Psychology
+April,Beltran,april.beltran317@student.edu,Student,,Literature
+Amanda,Rodriguez,amanda.rodriguez782@student.edu,Student,,Political Science
+Paul,Singh,paul.singh172@student.edu,Student,,Mathematics
+Michael,Hester,michael.hester287@student.edu,Student,,Economics
+William,Brown,william.brown482@student.edu,Student,,Business
+Matthew,Figueroa,matthew.figueroa36@student.edu,Student,,Literature
+John,Stewart,john.stewart843@student.edu,Student,,Physics
+Cynthia,Peters,cynthia.peters6@student.edu,Student,,History
+Peter,Baker,peter.baker578@student.edu,Student,,Literature
+Sandra,Palmer,sandra.palmer566@student.edu,Student,,Literature
+Jeffrey,Hart,jeffrey.hart142@student.edu,Student,,Psychology
+Kimberly,Mcbride,kimberly.mcbride837@student.edu,Student,,Psychology
+Joseph,Cochran,joseph.cochran28@student.edu,Student,,Literature
+Cynthia,Roy,cynthia.roy994@student.edu,Student,,Business
+Karen,Thomas,karen.thomas212@student.edu,Student,,History
+Vincent,Pittman,vincent.pittman662@student.edu,Student,,Physics
+Kenneth,Mercer,kenneth.mercer76@student.edu,Student,,Biology
+Warren,Thomas,warren.thomas525@student.edu,Student,,Mathematics
+Raymond,Williams,raymond.williams769@student.edu,Student,,Psychology
+Tiffany,Butler,tiffany.butler129@student.edu,Student,,Mathematics
+Curtis,Smith,curtis.smith939@student.edu,Student,,Undeclared
+Emily,Lane,emily.lane915@student.edu,Student,,Literature
+Beth,Newman,beth.newman270@student.edu,Student,,History
+Diana,Zamora,diana.zamora14@student.edu,Student,,Chemistry
+Aaron,Daniels,aaron.daniels640@student.edu,Student,,Undeclared
+Lindsey,Salas,lindsey.salas798@student.edu,Student,,Biology
+Alyssa,Austin,alyssa.austin585@student.edu,Student,,Computer Science
+Angela,Sharp,angela.sharp255@student.edu,Student,,Chemistry
+Sheryl,Ramirez,sheryl.ramirez106@student.edu,Student,,Economics
+Kimberly,Lewis,kimberly.lewis325@student.edu,Student,,Economics
+Amy,Simmons,amy.simmons820@student.edu,Student,,Physics
+Troy,Martin,troy.martin334@student.edu,Student,,Business
+Mary,Romero,mary.romero706@student.edu,Student,,Undeclared
+Danielle,Richards,danielle.richards653@student.edu,Student,,Business
+Nathaniel,Craig,nathaniel.craig126@student.edu,Student,,Computer Science
+Ralph,Holt,ralph.holt814@student.edu,Student,,Physics
+Catherine,Hernandez,catherine.hernandez379@student.edu,Student,,Economics
+Barry,Jones,barry.jones600@student.edu,Student,,Political Science
+Natalie,Fisher,natalie.fisher21@student.edu,Student,,Political Science
+Jessica,Moses,jessica.moses325@student.edu,Student,,Psychology
+Samuel,Barnes,samuel.barnes360@student.edu,Student,,Political Science
+Erik,Hurst,erik.hurst380@student.edu,Student,,Biology
+Daniel,Chung,daniel.chung851@student.edu,Student,,Political Science
+Dalton,Parker,dalton.parker452@student.edu,Student,,Physics
+Katherine,Smith,katherine.smith788@student.edu,Student,,Undeclared
+Jessica,Morris,jessica.morris729@student.edu,Student,,History
+James,Anderson,james.anderson670@student.edu,Student,,Literature
+David,Stafford,david.stafford877@student.edu,Student,,History
+Jade,Petersen,jade.petersen790@student.edu,Student,,Literature
+Heather,Buchanan,heather.buchanan959@student.edu,Student,,Undeclared
+Kevin,Barrett,kevin.barrett912@student.edu,Student,,Chemistry
+Charles,Avila,charles.avila465@student.edu,Student,,Engineering
+Tony,Lopez,tony.lopez303@student.edu,Student,,Biology
+Paige,Salazar,paige.salazar617@student.edu,Student,,Psychology
+Kimberly,Johnson,kimberly.johnson72@student.edu,Student,,Psychology
+Gregory,Anderson,gregory.anderson272@student.edu,Student,,Communications
+Jeremy,Perry,jeremy.perry797@student.edu,Student,,Psychology
+Johnny,Fisher,johnny.fisher863@student.edu,Student,,Literature
