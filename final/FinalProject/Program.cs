@@ -17,9 +17,12 @@ class Program
                     ImportDataMenu();
                     break;
                 case "2":
-                    ViewDataMenu();
+                    AddDataMenu();
                     break;
                 case "3":
+                    ViewDataMenu();
+                    break;
+                case "4":
                     running = false;
                     Console.WriteLine("\nThank you for using the system. Goodbye!");
                     break;
@@ -37,8 +40,9 @@ class Program
         Console.WriteLine($"=== School Management System ===");
         Console.WriteLine($"{_orgBYU.GetOrganizationDetails()}");
         Console.WriteLine("1. Import Data");
-        Console.WriteLine("2. View Data");
-        Console.WriteLine("3. Exit");
+        Console.WriteLine("2. Add Data");
+        Console.WriteLine("3. View Data");
+        Console.WriteLine("4. Exit");
         Console.Write("\nPlease select an option: ");
     }
 
@@ -83,6 +87,73 @@ class Program
         }
     }
 
+    private static void AddDataMenu()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("=== Add Data ===");
+            Console.WriteLine("1. Add New User");
+            Console.WriteLine("2. Add New Course");
+            Console.WriteLine("3. Add Course Schedule");
+            Console.WriteLine("4. Return to Main Menu");
+            Console.Write("\nPlease select an option: ");
+
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    AddNewUser();
+                    break;
+                case "2":
+                    var course = new Course("", "", ""); // Temporary values, will be set in AddNewCourse
+                    course.AddNewCourse(_dataManager);
+                    PressEnterToContinue();
+                    break;
+                case "3":
+                    var schedule = new ClassSchedule("", "", "", new List<string>(), new List<string>(), new List<string>()); // Temporary values
+                    schedule.AddNewSchedule(_dataManager, _orgBYU);
+                    PressEnterToContinue();
+                    break;
+                case "4":
+                    return;
+                default:
+                    Console.WriteLine("\nInvalid option. Please try again.");
+                    PressEnterToContinue();
+                    break;
+            }
+        }
+    }
+
+    private static void AddNewUser()
+    {
+        Console.Clear();
+        Console.WriteLine("=== Add New User ===");
+        Console.WriteLine("1. Add Teacher");
+        Console.WriteLine("2. Add Student");
+        Console.WriteLine("3. Return to Previous Menu");
+        Console.Write("\nPlease select an option: ");
+
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                new Teacher(null, null, null, null, "teacher", null).AddNewUser(_dataManager, _orgBYU);
+                break;
+            case "2":
+                new Student(null, null, null, null, "student", null).AddNewUser(_dataManager, _orgBYU);
+                break;
+            case "3":
+                return;
+            default:
+                Console.WriteLine("\nInvalid option. Please try again.");
+                PressEnterToContinue();
+                break;
+        }
+    }
+
     private static void ViewDataMenu()
     {
         while (true)
@@ -120,7 +191,7 @@ class Program
         {
             Console.Clear();
             Console.WriteLine("=== User Data ===");
-            Console.WriteLine("1. View Specific User Data and Schedule");
+            Console.WriteLine("1. View Specific User Data");
             Console.WriteLine("2. List All Users");
             Console.WriteLine("3. Return to Previous Menu");
             Console.Write("\nPlease select an option: ");
@@ -132,10 +203,15 @@ class Program
                 case "1":
                     Console.Write("\nEnter User ID: ");
                     string userId = Console.ReadLine();
-                    ViewUserDetails(userId);
+                    var user = _dataManager.GetAllUsers().Find(u => u.GetUserId() == userId);
+                    if (user != null)
+                        user.DisplayUserDetails();
+                    else
+                        Console.WriteLine("\nUser not found.");
+                    PressEnterToContinue();
                     break;
                 case "2":
-                    ListAllUsers();
+                    User.ListAllUsers(_dataManager);
                     break;
                 case "3":
                     return;
@@ -153,7 +229,7 @@ class Program
         {
             Console.Clear();
             Console.WriteLine("=== Course Data ===");
-            Console.WriteLine("1. View Course Roster (All Courses)");
+            Console.WriteLine("1. View Course Roster");
             Console.WriteLine("2. View Specific Course Schedules");
             Console.WriteLine("3. Return to Previous Menu");
             Console.Write("\nPlease select an option: ");
@@ -163,12 +239,17 @@ class Program
             switch (choice)
             {
                 case "1":
-                    ListAllCourses();
+                    Course.ListAllCourses(_dataManager);
                     break;
                 case "2":
                     Console.Write("\nEnter Course ID: ");
                     string courseId = Console.ReadLine();
-                    ViewCourseSchedules(courseId);
+                    var course = _dataManager.GetAllCourses().Find(c => c.GetCourseId() == courseId);
+                    if (course != null)
+                        course.DisplaySchedules(_dataManager.GetAllSchedules());
+                    else
+                        Console.WriteLine("\nCourse not found.");
+                    PressEnterToContinue();
                     break;
                 case "3":
                     return;
@@ -178,102 +259,6 @@ class Program
                     break;
             }
         }
-    }
-
-    private static void ViewUserDetails(string userId)
-    {
-        Console.Clear();
-        var users = _dataManager.GetAllUsers();
-        var user = users.Find(u => u.GetUserId() == userId);
-
-        if (user == null)
-        {
-            Console.WriteLine($"\nUser with ID {userId} not found.");
-            PressEnterToContinue();
-            return;
-        }
-
-        Console.WriteLine($"\nUser Details for {userId}:");
-        Console.WriteLine($"Name: {user.GetFirstName()} {user.GetLastName()}");
-        Console.WriteLine($"Email: {user.GetEmail()}");
-        Console.WriteLine($"Role: {user.GetRole()}");
-
-        if (user is Teacher teacher)
-        {
-            Console.WriteLine($"Department: {teacher.GetDepartment()}");
-        }
-        else if (user is Student student)
-        {
-            Console.WriteLine($"Major: {student.GetMajor()}");
-        }
-
-        PressEnterToContinue();
-    }
-
-    private static void ListAllUsers()
-    {
-        Console.Clear();
-        var users = _dataManager.GetAllUsers(); // varKeyword.md
-        
-        Console.WriteLine("\nAll Users:");
-        Console.WriteLine("Teachers:");
-        foreach (var user in users.Where(u => u is Teacher)) // linq.md -- using a where "clause" to find all teachers
-        {
-            Console.WriteLine($"{user.GetUserId()} - {user.GetFirstName()} {user.GetLastName()} ({user.GetEmail()})");
-        }
-
-        Console.WriteLine("\nStudents:");
-        foreach (var user in users.Where(u => u is Student)) // linq.md -- using a where "clause" to find all students
-        {
-            Console.WriteLine($"{user.GetUserId()} - {user.GetFirstName()} {user.GetLastName()} ({user.GetEmail()})");
-        }
-
-        PressEnterToContinue();
-    }
-
-    private static void ListAllCourses()
-    {
-        Console.Clear();
-        var courses = _dataManager.GetAllCourses(); // varKeyword.md
-        var users = _dataManager.GetAllUsers(); // varKeyword.md 
-
-        Console.WriteLine("\nCourse Roster:");
-        foreach (var course in courses)
-        {
-            Console.WriteLine($"\nCourse: {course.GetCourseId()} - {course.GetCourseName()}");
-            var teacher = users.Find(u => u.GetUserId() == course.GetTeacherId());
-            Console.WriteLine($"Teacher: {teacher?.GetFirstName()} {teacher?.GetLastName()}");
-        }
-
-        PressEnterToContinue();
-    }
-
-    private static void ViewCourseSchedules(string courseId)
-    {
-        Console.Clear();
-        var courses = _dataManager.GetAllCourses();
-        var schedules = _dataManager.GetAllSchedules();
-        var course = courses.Find(c => c.GetCourseId() == courseId); // linq.md  
-
-        if (course == null)
-        {
-            Console.WriteLine($"\nCourse with ID {courseId} not found.");
-            PressEnterToContinue();
-            return;
-        }
-
-        Console.WriteLine($"\nSchedules for Course: {course.GetCourseId()} - {course.GetCourseName()}");
-        var courseSchedules = schedules.Where(s => s.GetCourseId() == courseId);
-
-        foreach (var schedule in courseSchedules)
-        {
-            Console.WriteLine($"\nSchedule ID: {schedule.GetScheduleId()}");
-            Console.WriteLine($"Room: {schedule.GetRoomNumber()}");
-            Console.WriteLine($"Days: {string.Join(", ", schedule.GetDaysOfWeek())}");
-            Console.WriteLine($"Time: {schedule.GetStartTime()[0]} - {schedule.GetEndTime()[0]}");
-        }
-
-        PressEnterToContinue();
     }
 
     private static void PressEnterToContinue()
